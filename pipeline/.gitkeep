@@ -1,0 +1,5 @@
+Contains the preprocessing pipeline package used:
+- cleaning.py --> cleans and standardizes NTSB & METAR dataset, drops unecessary columns, and adds crosswind and tailwind components for weather.
+- eda.py --> performs basic exploratory data analysis (EDA) to understand relationships and data structure.
+- feature_engineering.py --> selects top features through Mutual Information (MI) feature selection and Conditional Mutual Information (CMI) selection.
+- visualization --> histograms and bar plots that visualize relationships amongst variables.
