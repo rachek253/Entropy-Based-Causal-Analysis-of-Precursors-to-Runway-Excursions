@@ -1,0 +1,10 @@
+Contains the information_theory package used in the analysis.
+To use: 
+1. Download whole folder
+2. Ensure __init__.py is present; if not, create __init__.py and keep in this folder so Python can read this folder as a packaged.
+3. In main script, run these lines to import package:
+from .Entropy import entropy, discretize_if_needed
+from .Joint_Entropy import joint_entropy
+from .Mutual_Information import mutual_information
+from .Conditional_Mutual_Information import conditional_mutual_information
+from .Causation_Entropy import causation_entropy
