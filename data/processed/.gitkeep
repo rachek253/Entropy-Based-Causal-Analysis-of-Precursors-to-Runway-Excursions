@@ -1,1 +1,8 @@
-
+data/processed contains all processed and cleaned data files for the runway excursion analysis
+Files include:
+- airport_station_map.csv
+- unmatched_airports.csv
+- METAR_Weather_Combined.csv
+- METAR_TimeAligned_Final.csv
+- FINAL_NTSB_METAR_DATASET.csv
+- NTSB_METAR_cleaned.csv
