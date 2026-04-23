@@ -25,15 +25,23 @@ def discretize_if_needed(x, bins = 10):
     """
     Discretizes numeric data into bins if needed.    
     """
-    x = pd.Series(x)
+    x = pd.Series(np.asarray(x).ravel())
 
+    x = x.fillna(x.median() if pd.api.types.is_numeric_dtype(x)
+                 else "UNKNOWN")
     if pd.api.types.is_numeric_dtype(x):
-        # fill NaN before binning to avoid data loss
-        x_filled = x.fillna(x.median())
-
-        x_binned = pd.cut(x_filled, bins = bins, labels = False, duplicates = "drop")
+        # using rank-based discretization instead of bin edges
+        x = x.rank(method = "average")
     
-    return x_binned.astype("Int64")
+        # normalizing into bins
+        x = (x / len(x) * bins).astype(int)
+    else:
+        x = x.astype("category").cat.codes
+
+    return x
+    
+    
+    
 #=================================================================================
 
 #=================================================================================
