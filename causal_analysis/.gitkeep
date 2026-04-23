@@ -1,0 +1,10 @@
+Package for causal analysis pipeline.
+
+Contains:
+__init__.py --> initializes causation_analysis package 
+utils.py --> utlity functions utilized in causal analysis, include target variable creation and feature
+combination for conditioning sets.
+core_CSE.py --> core causal analysis functions (forward feature selection using CSE, permutation 
+testing, and bootstrap stability).
+causal_grahp.py --> builds and visualizes directed graphs for causation entropy results.
+latex_tables.py --> saves CSE results as LaTex-ready tables for easy report implementation.
