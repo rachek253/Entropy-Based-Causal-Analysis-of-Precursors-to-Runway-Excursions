@@ -31,8 +31,9 @@ def joint_entropy(*variables, bins = 10):
     # convert all inputs to Series and discretize if needed
     processed = []
     for var in variables: 
+        var = np.asarray(var).ravel()
         v = discretize_if_needed(var, bins = bins)
-        processed.append(pd.Series(v))
+        processed.append(pd.Series(v).reset_index(drop = True))
 
     # combine into DataFrame
     df = pd.concat(processed, axis = 1)
@@ -42,7 +43,7 @@ def joint_entropy(*variables, bins = 10):
         return 0.0
     
     # convert rows into tuples
-    joint_states = list(map(tuple, df.values))
+    joint_states = [tuple(row) for row in df.to_numpy()]
 
     counts = Counter(joint_states)
 
