@@ -24,7 +24,7 @@ def mutual_information(x, y, bins = 10):
     """
     Computes mutual information I(X;Y)
     """
-    x = discretize_if_needed(x, bins)
-    y = discretize_if_needed(y, bins)
+    # x = discretize_if_needed(x, bins)
+    # y = discretize_if_needed(y, bins)
 
     return entropy(x) + entropy(y) - joint_entropy(x, y)
