@@ -148,8 +148,9 @@ RANDOM_SEED = 0
 
 ### Requirements
 Install dependencies: 
+```bash
 pip install -r requirements.txt
-
+```
 Required libraries include:
   - numpy
   - pandas
