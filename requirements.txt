@@ -1,0 +1,21 @@
+# Core data handling
+numpy>=1.23
+pandas>=2.0
+
+# Scientific computing
+scipy>=1.10
+
+# Machine learning utilities (bootstrap, resampling, MI baselines)
+scikit-learn>=1.3
+
+# Graph / causal structure visualization
+networkx>=3.1
+
+# Plotting / figures
+matplotlib>=3.7
+
+# Environment variable handling
+python-dotenv>=1.0
+
+# Optional but commonly used for data visualization stability
+seaborn>=0.13
