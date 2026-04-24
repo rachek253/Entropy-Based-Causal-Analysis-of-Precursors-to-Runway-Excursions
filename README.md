@@ -40,11 +40,13 @@ data/
     * Airport Stations/
     * METAR/
     * Merged Datasets/
+      
 pipeline/
   - __init__.py
   - cleaning.py
   - feature_engineering.py
   - visualization.py
+
 information_theory/
   - __init__.py
   - Entropy.py
@@ -53,23 +55,28 @@ information_theory/
   - Conditional_Mutual_Information.py
   - Casuation_Entropy.py
   - cmi_FeatureSelection.py
+
 causal_analysis/
   - __init__.py
   - utils.py
   - core_CSE.py
   - causal_graph.py
   - latex_tables.py
+
 analysis_scripts/
   - NTSB_METAR_cleaning_EDA.py
   - causal_analysis_main.py
+
 METAR Scripts/
   - METAR.py
   - METAR_fallback_stations.py
   - METAR_full.py
   - METAR_event_aligned_merge.py
+
 figures/
   - figures_png
   - figures_svg
+
 Project Documentation/
   - Entropy_Based_Causal_Analysis_of_Precursors_to_Runway_Excursions.pdf
 
